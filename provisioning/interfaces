@@ -1,0 +1,4 @@
+iface tap0 inet manual
+pre-up ip tuntap add dev tap0 mode tap
+pre-up ip addr add 192.168.2.1/24 dev tap0
+up ip link set dev tap0 up
